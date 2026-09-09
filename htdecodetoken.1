@@ -4,10 +4,10 @@ htdecodetoken \- decode JSON Web Token
 
 .SH SYNOPSIS
 .B htdecodetoken
-[-a] [-H] [file]
+[-a] [-H] [-s|-f] [-v] [file]
 .PP
 .B httokendecode
-[-a] [-H] [file]
+[-a] [-H] [-s|-f] [-v] [file]
 
 .SH DESCRIPTION
 .B htdecodetoken
@@ -42,6 +42,17 @@ that are normally shown in Epoch time
 instead in the human-readable form used by default by the
 .B date
 command.
+.TP
+.B \-s
+Skips scitokens-verify validation.  Cannot be used with -f.
+This is the default if stdout is not a TTY, or if scitokens-verify
+is not available in the PATH.
+.TP
+.B \-f
+Force scitokens-verify validation.  Cannot be used with -s.
+.TP
+.B \-v
+Enable verbose mode, showing in stderr where the token came from.
 
 .SH AUTHOR
 Dave Dykstra

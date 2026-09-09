@@ -74,6 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+# - Add missing -s, -f, and -v options to htdecodetoken man page.
 
 * Thu Jan 15 2026 Dave Dykstra <dwd@fnal.gov> 2.6-1
 - Have htdecodetoken take advantage of new scitokens-verify ability
