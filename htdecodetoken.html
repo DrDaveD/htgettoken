@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.22.2 -->
-<!-- CreationDate: Thu Aug 17 12:00:17 2023 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Wed Sep  9 10:34:39 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -46,11 +46,11 @@
 
 
 <p style="margin-left:11%; margin-top: 1em"><b>htdecodetoken</b>
-[-a] [-H] [file]</p>
+[-a] [-H] [-s|-f] [-v] [file]</p>
 
 
 <p style="margin-left:11%; margin-top: 1em"><b>httokendecode</b>
-[-a] [-H] [file]</p>
+[-a] [-H] [-s|-f] [-v] [file]</p>
 
 <h2>DESCRIPTION
 <a name="DESCRIPTION"></a>
@@ -113,6 +113,43 @@ output.</p> </td></tr>
 shown in Epoch time (seconds since the beginning of 1970)
 instead in the human-readable form used by default by the
 <b>date</b> command.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;s</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p>Skips scitokens-verify validation. Cannot be used with
+-f. This is the default if stdout is not a TTY, or if
+scitokens-verify is not available in the PATH.</p></td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;f</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p>Force scitokens-verify validation. Cannot be used with
+-s.</p> </td></tr>
+<tr valign="top" align="left">
+<td width="11%"></td>
+<td width="3%">
+
+
+<p><b>&minus;v</b></p></td>
+<td width="8%"></td>
+<td width="78%">
+
+
+<p>Enable verbose mode, showing in stderr where the token
+came from.</p></td></tr>
 </table>
 
 <h2>AUTHOR
